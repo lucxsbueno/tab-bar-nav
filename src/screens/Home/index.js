@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
       height: 300,
    },
    button: {
-      padding: 15,
+      padding: 18,
       alignItems: 'center',
       borderRadius: 32,
 

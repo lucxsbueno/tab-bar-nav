@@ -20,7 +20,7 @@ export function Routes() {
       <Tab.Navigator
             tabBarOptions={{
                style: {
-                  backgroundColor: '#F8F8F8',
+                  backgroundColor: '#F9F9FB',
                   borderTopColor: '#EAEAEA',
                   paddingHorizontal: 10,
                   borderTopWidth: 1,
@@ -35,6 +35,7 @@ export function Routes() {
                },
                labelStyle: {
                   fontSize: 14,
+                  marginTop: -2,
                   fontFamily: theme.fonts.medium
                }
             }}
