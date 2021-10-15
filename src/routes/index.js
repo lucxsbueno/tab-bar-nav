@@ -1,8 +1,10 @@
 import React from 'react';
 
+import { useTheme } from 'styled-components';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { Entypo, Feather } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
 import Home from '../screens/Home';
 import News from '../screens/News';
@@ -12,12 +14,15 @@ import Profile from '../screens/Profile';
 const Tab = createBottomTabNavigator();
 
 export function Routes() {
+   const theme = useTheme();
+
    return(
       <Tab.Navigator
             tabBarOptions={{
                style: {
-                  backgroundColor: '#F9F9FB',
+                  backgroundColor: '#F8F8F8',
                   borderTopColor: '#EAEAEA',
+                  paddingHorizontal: 10,
                   borderTopWidth: 1,
                   elevation: 0,
                   height: 67,
@@ -30,7 +35,7 @@ export function Routes() {
                },
                labelStyle: {
                   fontSize: 14,
-                  fontWeight: '600'
+                  fontFamily: theme.fonts.medium
                }
             }}
          >
@@ -43,21 +48,21 @@ export function Routes() {
             }} />
 
          <Tab.Screen
-            name="News"
+            name="Notícias"
             component={News}
             options={{
                tabBarIcon: ({size, color}) => (<Feather name="globe" size={size} color={color}/>)
             }} />
 
          <Tab.Screen
-            name="Plans"
+            name="Planos"
             component={Plans}
             options={{
-               tabBarIcon: ({size, color}) => (<Feather name="credit-card" size={size} color={color}/>)
+               tabBarIcon: ({size, color}) => (<Feather name="shopping-bag" size={size} color={color}/>)
             }} />
 
          <Tab.Screen
-            name="Profile"
+            name="Perfil"
             component={Profile}
             options={{
                tabBarIcon: ({size, color}) => (<Feather name="user" size={size} color={color}/>)
